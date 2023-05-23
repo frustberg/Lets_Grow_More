@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import './style.css'
-import { Link } from 'react-router-dom';
 
 const FormPage = () => {
     const [name, setName] = useState('');
@@ -36,17 +34,13 @@ const FormPage = () => {
         setEmail('')
         setWebURL('')
         setImgLink('')
-        setGender('Options')
+        setGender('')
         setSkills([])
     }
 
-
-
     return (
         <>
-            <Link to='/' style={{ textDecoration: 'none'}}>
-                <h2 className='text-center bg-success text-white p-3'>Student Enrollment Form</h2>
-            </Link>
+            <h2 className='text-center bg-success text-white p-3'>Student Enrollment Form</h2>
             <Container>
                 <Row>
                     <Col>
@@ -84,19 +78,20 @@ const FormPage = () => {
                             </div> <br />
 
                             <div className="d-inline-flex">
-                                Skills :
+                                Skills:
                                 <div className="mb-3 form-check mx-5">
                                     <input type="checkbox" value="Java" checked={skills.includes("Java")} onChange={handleSkillChange} className="form-check-input" id="exampleCheck1" />
                                     <label className="form-check-label" htmlFor="exampleCheck1">Java</label>
                                 </div>
                                 <div className="mb-3 form-check -mx-5">
-                                    <input type="checkbox" className="form-check-input" value="Html" checked={skills.includes("Html")} onChange={handleSkillChange} id="exampleCheck1" />
+                                    <input type="checkbox" className="form-check-input" value="Html" checked={skills.includes("Html")} onChange={handleSkillChange} id="exampleCheck2" />
                                     <label className="form-check-label" htmlFor="exampleCheck1">HTML</label>
                                 </div>
-                                <div className="mb-3 form-check mx-3 mb-4">
-                                    <input type="checkbox" className="form-check-input mx-2" value="CSS" checked={skills.includes("CSS")} onChange={handleSkillChange} id="exampleCheck1" />
-                                    <label className="form-check-label" htmlFor="exampleCheck1">CSS</label>
+                                <div className="mb-3 form-check mx-5">
+                                    <input type="checkbox" className="form-check-input" value="CSS" checked={skills.includes("CSS")} onChange={handleSkillChange} id="exampleCheck3" />
+                                    <label className="form-check-label" htmlFor="exampleCheck2">CSS</label>
                                 </div>
+                                
                             </div> <br />
 
                             <button onClick={submitData} type="button" className="btn btn-outline-success">Enroll Student</button>
@@ -104,8 +99,6 @@ const FormPage = () => {
                         </form>
                     </Col>
 
-                    {/* Card Show Here Below */}
-                    {/* <Col>Line</Col> */}
                     <Col>
                         <div className="container mx-auto mt-4">
                             <div className="justify-content-center align-items-center ">
@@ -134,27 +127,6 @@ const FormPage = () => {
                                     ))}
                                 </div>
 
-                                {/* {usersData.map((val, key) => {
-                                    return (
-                                        <div className="col-md-4 " key={key}>
-                                            <div className="card" style={{ width: '25em' }}>
-                                                <img src={val.imgLink} className="card-img-top" alt="..." />
-                                                <div className="card-body">
-                                                    <h5 className="card-title">{val.name}</h5>
-                                                    <h6 className="card-text">{val.gender}</h6>
-                                                    <p className="card-text"><small className="text-body-secondary">{val.email}</small></p>
-                                                    <p className="card-text"><small className="text-body-secondary">{val.webURL}</small></p>
-                                                    <div className="d-inline-flex">
-                                                        {
-                                                            val.skills.map((v, k) => <p key={k} className="list-group-item">{v +','}</p>
-                                                            )
-                                                        }
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                })} */}
                             </div>
                         </div>
                     </Col>

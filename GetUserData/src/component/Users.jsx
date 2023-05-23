@@ -32,7 +32,7 @@ const Users = () => {
     return (
         <>
             <div className="container-fluid bg-dark text-white py-3 px-5 d-flex justify-content-between align-items-center">
-                <Link to='/form' style={{textDecoration: 'none', color: 'white'}}>
+                <Link style={{textDecoration: 'none', color: 'white'}}>
                     <h2 >M.Babar Waseem</h2>
                 </Link>
                 <div>

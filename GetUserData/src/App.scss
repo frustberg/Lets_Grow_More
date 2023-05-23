@@ -1,4 +1,3 @@
-// Navigation Variables
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 70px;
@@ -6,13 +5,11 @@ $nav-background: #262626;
 $nav-font-color: #ffffff;
 $link-hover-color: #2581DC;
 
-// Outer navigation wrapper
 .navigation {
     height: $nav-height;
     background: $nav-background;
 }
 
-// Logo and branding
 .brand {
     position: absolute;
     padding-left: 20px;
@@ -28,13 +25,11 @@ $link-hover-color: #2581DC;
     }
 }
 
-// Container with no padding for navbar
 .nav-container {
     max-width: $content-width;
     margin: 0 auto;
 }
 
-// Navigation 
 nav {
     float: right;
 
@@ -67,7 +62,6 @@ nav {
                 }
             }
 
-            // Dropdown list
             ul li {
                 min-width: 190px;
 
@@ -80,7 +74,6 @@ nav {
     }
 }
 
-// Dropdown list binds to JS toggle event
 .nav-dropdown {
     position: absolute;
     display: none;
@@ -88,9 +81,7 @@ nav {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile navigation */
 
-// Binds to JS Toggle
 .nav-mobile {
     display: none;
     position: absolute;
@@ -103,7 +94,6 @@ nav {
 
 @media only screen and (max-width: 798px) {
 
-    // Hamburger nav visible on mobile only
     .nav-mobile {
         display: block;
     }

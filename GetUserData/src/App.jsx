@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Users from './component/Users';
-import FormPage from './component/FormPage';
 
 function App() {
 
@@ -9,8 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-    <Route path='/' element={<Users/>}/>
-    <Route path='/form' element={<FormPage/>}/>
+        <Route path='/' element={<Users />} />
       </Routes>
     </BrowserRouter>
 
